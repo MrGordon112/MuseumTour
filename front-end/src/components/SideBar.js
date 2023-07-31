@@ -8,11 +8,13 @@ const SideBar = props => {
     let {profile,user, logoutUser}=useContext(AuthContext)
   const sidebarClass = props.isOpen ? "sidebar open" : "sidebar";
 
+
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
 
   return (
     <div className={sidebarClass}>

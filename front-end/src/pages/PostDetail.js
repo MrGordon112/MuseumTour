@@ -85,13 +85,13 @@ const PostDetail = ({match})  => {
         if (result) {
     //Logic to delete the item
 
-        fetch('http://127.0.0.1:8000/museums/post_detail/'+postId,{method:"DELETE"})
+        fetch('/museums/post_detail/'+postId,{method:"DELETE"})
         .then((response)=>{
             if(!response.ok){
                 throw new Error('not deleted')
             }
 
-            navigate('/museums/');
+            navigate('/museums/'+post.museum.id);
         }
         ).catch((e)=>{console.log(e)});
     }}

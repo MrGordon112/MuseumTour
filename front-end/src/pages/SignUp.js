@@ -2,11 +2,10 @@ import React,{useContext, useState} from 'react'
 import AuthContext from  '../context/AuthContext'
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom'
-
 import { Link } from 'react-router-dom';
 
 const SignUpPage=()=>{
-    let history=useNavigate()
+    let navigate=useNavigate()
     const [errorMessage, setErrorMessage] = useState("");
     let {name, }= useContext(AuthContext)
      const [formData, setFormData] = useState({
@@ -18,7 +17,7 @@ const SignUpPage=()=>{
 
 
  const signUp=async()=> {
-        let response= axios.post('/museums/register/',formData)
+        let response=axios.post('/museums/register/',formData)
         .then((response)=>{
             if(response.status!=200){
                 throw new Error('not added')
@@ -26,9 +25,9 @@ const SignUpPage=()=>{
 
 
         }
-        ).catch((e)=>{setErrorMessage('not added')});
+        ).catch((e)=>{console.log(e)})
 
-
+        navigate("/login")
     }
 
     return (

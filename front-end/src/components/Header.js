@@ -51,7 +51,7 @@ const Header = props=>{
 		 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
 <li className='nav-item'>
               <Link
-                to='/uploadPhoto'
+                to='/'
                 className='nav-links dont-display'
                 onClick={closeMobileMenu}
               >

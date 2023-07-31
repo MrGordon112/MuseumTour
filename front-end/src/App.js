@@ -22,7 +22,6 @@ import AddMuseum from './pages/AddMuseum'
 import MuseumDetail from './pages/MuseumDetail'
 import PostDetail from './pages/PostDetail'
 import AddPost from './pages/AddPost'
-import UploadPhoto from './pages/UploadPhoto'
 
 function App() {
 const [sidebarOpen, setSideBarOpen] = useState(false);
@@ -39,7 +38,6 @@ const [sidebarOpen, setSideBarOpen] = useState(false);
         <SideBar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
        <Routes>
           <Route path='/' exact element={<Home/>} />
-          <Route path='/uploadPhoto' exact element={<UploadPhoto/>} />
           <Route path='/museums' element={<Museums/>} />
           <Route exact path='/myProfile' element={<MyProfile/>} />
           <Route exact path='/myProfileEdit' element={<MyProfileEdit/>} />

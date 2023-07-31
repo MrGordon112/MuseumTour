@@ -15,8 +15,8 @@ function HeroSection() {
   }
 
   return (
-    <div className='hero-container'>
-      <video className="videoHero" src='https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/videos%2Fvideo-1.mp4?alt=media&token=c2c564ad-7566-4dbe-8e81-2cf11f22e6fc' autoPlay loop muted />
+    <div className='hero-container3'>
+      <video  autoplay muted loop playsinline className="videoHero" src='https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/videos%2Fvideo-1.mp4?alt=media&token=c2c564ad-7566-4dbe-8e81-2cf11f22e6fc' />
       <h1>About us</h1>
        <p className="website-description"> &nbsp;&nbsp; &nbsp; Join us on this extraordinary journey as we revolutionize
       the way we experience museums. Embark on a virtual adventure, delve into the depths of knowledge,

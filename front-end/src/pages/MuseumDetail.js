@@ -110,7 +110,7 @@ await Promise.all(
         if (result) {
     //Logic to delete the item
 
-        fetch('http://127.0.0.1:8000/museums/list_museums/'+museumId,{method:"DELETE"})
+        fetch('/museums/list_museums/'+museumId,{method:"DELETE"})
         .then((response)=>{
             if(!response.ok){
                 throw new Error('not deleted')
@@ -128,17 +128,18 @@ await Promise.all(
 		<HeaderMuseumAdministrator museum={museum} />
 
 
-     {profile?.id===museum?.profile?.id && (<div>
+
+<div className="body_list">
+  <button className="add_button" onClick={downloadQrCodes}>&#x2193;  Download QrCodes</button>
+{profile?.id===museum?.profile?.id && (<div>
      <Link to={'/addPost/'+museumId}><button className="edit_button">&#x270E;Edit Museum</button></Link>
 	<Link to={'/addPost/'+museumId}><button className="add_button">&#x2713;Add Exponate</button></Link>
 	<button className="delete" className="delete_button" onClick={Delete}>&#x2716;Delete Museum  </button></div>
 	)}
 
-<div className="body_list">
-  <button className="add_button" onClick={downloadQrCodes}>&#x2193;  Download QrCodes</button>
-
 
 <form class="search" action="">
+
   <input type="search" placeholder="Search by name..."
     defaultValue={searchTerm}
     onChange={handleChange}
