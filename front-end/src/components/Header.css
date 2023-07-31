@@ -98,8 +98,8 @@ display:block;
 .navbar-logo {
 position:fixed;
   color: #fff;
-  margin-left: -20x;
-  margin-top:-60px;
+  left: 90px;
+  top:10px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
