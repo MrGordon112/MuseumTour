@@ -40,7 +40,6 @@ const Header = props=>{
          <button className="openbtn display" onClick={props.onClick}>☰</button>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             MuseumsTour
-            <i className='fab fa-typo3' />
           </Link>
 
           <div className='menu-icon' onClick={handleClick}>

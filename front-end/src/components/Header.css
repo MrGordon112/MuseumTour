@@ -18,19 +18,7 @@
 .display{
 display:none;
 }
-.openbtn {
- position: sticky;
-    top: 0;
-    left: 0;
-    height:100%;
-    width:5%;
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
+
 .navbar-container {
 
  position:fixed;
@@ -43,10 +31,9 @@ display:none;
 
 .navbar-logo {
 left:50px;
-position:fixed;
+position:sticky;
   color: #fff;
   justify-self: start;
-  cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
   display: flex;
@@ -111,14 +98,26 @@ display:block;
 .navbar-logo {
 position:fixed;
   color: #fff;
-  justify-self: start;
   margin-left: -20x;
   margin-top:-60px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
-  display: flex;
   align-items: center;
+}
+
+.openbtn {
+position:fixed;
+    top: 0;
+    left: 0;
+    height:80px;
+    width:50px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
 }
   .nav-menu {
     position:fixed;
@@ -157,12 +156,7 @@ position:fixed;
     border-radius: 0;
   }
 
-  .navbar-logo {
- position:fixed;
-    margin-top: -60px;
-    margin-left: -25px;
-    transform: translate(25%, 50%);
-  }
+
 
   .menu-icon {
     display: block;
@@ -200,19 +194,6 @@ position:fixed;
     transition: 250ms;
   }
 
-.openbtn {
-position:fixed;
-    top: 0;
-    left: 0;
-    height:80px;
-    width:50px;
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
 .dont-display{
 display:none;
 }
