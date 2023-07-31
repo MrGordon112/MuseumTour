@@ -110,7 +110,8 @@ display:block;
 .navbar-logo {
   color: #fff;
   justify-self: start;
-  margin-left: 100px;
+  margin-left: -20x;
+  margin-top:-60px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -155,9 +156,9 @@ display:block;
   }
 
   .navbar-logo {
-    position: absolute;
-    top: -20;
-    left: -25;
+    position: sticky;
+    margin-top: -60px;
+    margin-left: -25px;
     transform: translate(25%, 50%);
   }
 
@@ -198,7 +199,7 @@ display:block;
   }
 
 .openbtn {
-  position: absolute;
+  position:sticky;
     top: 0;
     left: 0;
     height:100%;
