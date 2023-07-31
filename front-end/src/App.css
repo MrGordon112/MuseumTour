@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+.body-form{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+}
+.form-add{
+
+max-width: 800px;
+  background: #fff;
+  width: 800px;
+  padding: 25px 40px 10px 40px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+
+}
+
+#subject{
+height:200px;
+width:100%;
+}
+.map{
+float:left;
+height:300px;
+width:500px;
+}
+.museum_container{
+display: grid;
+grid-template-columns: repeat(2,auto);
+text-align: center;
+justify-content: end;
+    margin-right: 2rem;
+    width: 100vw;
+grid-gap: 5px;
+}
+
+
+
+.website-description{
+text-align: center;
+margin:100px;
+}
+.home,
+.services,
+.products,
+.sign-up {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+.body_list{
+ background-color: hsla(0, 0%, 30%, 0.6);
+width:100%;
+height:auto;
+overflow: hidden;
+}
+.services {
+  background-image: url('/public/images/img-2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.products {
+  background-image: url('/public/images/img-1.jpg');
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.sign-up {
+  background-image: url('/public/images/img-8.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+@media screen and (max-width: 960px) {
+.website-description{
+text-align: center;
+margin:10px;
+}
+.museum_container{
+margin-right:0;
+margin-left:0;
+display:block;
+width:100%;
+}
+.website-description{
+width:95%;
+}
+.map{
+width:95%;
+margin-left:10px;}
+}

@@ -1,0 +1,201 @@
+.center {
+  height: 30vh;
+  width:50%;
+  display: flex;
+  align-items: left;
+  float:left;
+  justify-content: left;
+  padding:10px;
+  padding-left:30px;
+}
+
+.article-card {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 300ms;
+}
+
+.article-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+.article-card img {
+
+  width: 600px;
+  height: 300px;
+}
+.article-card:hover .content {
+ background-color: hsla(0, 0%, 50%, 0.6);
+
+}
+
+.article-card:hover .title{
+  font-size: 25px;
+
+}
+.article-card:hover .date{
+  font-size: 17px;
+
+}
+
+.article-card .content {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  padding: 30px 20px 20px 20px;
+  height: auto;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+
+.article-card .date,
+.article-card .title {
+  margin: 0;
+}
+
+.article-card .date {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4px;
+}
+
+.article-card .title {
+  font-size: 17px;
+  color: #fff;
+}
+
+.add_button {
+  margin-left:50%;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.add_button2 {
+  margin-left:50%;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.delete_button{
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.delete_button2{
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.edit_button{
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left:33%;
+}
+.add_button:hover{
+
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+@media screen and (max-width: 1100px) {
+.center {
+  height: 40vh;
+  width:50%;
+  display: flex;
+  align-items: left;
+  float:left;
+  justify-content: left;
+
+  padding-left:10px;
+}
+}
+
+@media screen and (max-width: 700px) {
+.delete_button{
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;}
+.center {
+  height: 40vh;
+  width:100%;
+  display: flex;
+  align-items: left;
+  float:left;
+  justify-content: left;
+}
+.add_button{
+margin-left:25%;
+width:50%;
+}
+
+.delete_button{
+margin-left:25%;
+width:50%;
+}
+.add_button2{
+width:70%;
+}
+.delete_button2{
+width:50%;
+}
+.edit_button{
+margin-left:25%;
+width:50%;
+}
+
+.article-card img {
+
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+}

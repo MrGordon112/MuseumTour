@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "inspired-campus-391618",
+  "private_key_id": "166c3d06ae1b0cf5467b199b9734f06a747b895c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC3KpCYmbj0vkSU\ne9k56Dpb9eUPAlidy51PUXdxZAl5VGVOxkAcelpR5dIDWSMFhZUoET7FYnhnbISd\nc9q5J2fu66eXxNi6U+qzjWfLE+9mpF6DKBRFGxCHnBjZkbuPbliNBbwUj5t7o+Rb\nmgSqVgp9H7cbpQnsnc+3xU0JGTm4hYtzsGNA8ypdnve9Aok65TVCD3MHJZxOHVSM\npF8CPlPFOlV/wq37q1bq9mw22YYllAQJ2kBcOtpjvcDcABpyftv4NLB/84XK61L8\nlnkJLO6djs3jtOmq96Ar797ex/bYIQLjjQ/jnkdgsaSj4aAjVMuMRPEl/na+Rwme\nSNtN60lDAgMBAAECggEAGCFa6Eeu0Ute/zgWWjseXm7AF6Ca/7rLMB+5k8N2k2M2\nGiZ4XBLAYwlbCAbjsWleSOeGCfya2SE3kq39yCZer7VK9cMV5uzW6YL9BAjNzAtm\ndMfrF7Q6PWtSmMMgCa7N//zGljzZt8mpHr+P0shAByjjohg1fP8eANtUy+3kp/Vy\nxGuWJi+8XMHmbqUvkI8ABbt21IlNvjA6ICfXd7o8obZ7xeFaV2wy9jKLgqDGKqU3\nCQ+sISKKgfjYEUqxTMt5Rt9cBEevfxhCcLU45Nm7pNPZH2Q7oEPPMTvQRqogdhNs\n7z6tOnWiZzCygvu2WXqP5ZFFvtenDo2bUxJdYDlMYQKBgQDoC8hqMvR6KH3xnjmP\nx9+bhKdXuTPvMNpSwvethjB6kDFn0tlzY0oomnZJlp6c+0cs+9mxqq9IQd3t72nX\nDZzniOvyH05uR55mf6bSJ4gOaZChpot57UXFSBQQZK7fEC2DMnBJBNdyyB0i3GRb\nzkGSE+a9RHPjZ/GMC4LfY9QzYQKBgQDKEwzG/vwvsj4cU81XeDvKN4sqt8nY0Jr/\nDG8vG6X7IREMV+S//vDEr8NtMASlZA7348Nue9FemArEWMZmCpkFibLvso3ctQHk\nM5wfYU1Av80w8Pu+fRZsAnkPKm3ha5KR7pH8uhK0ugNqKXf6rdUZkm0O7YNsPJAD\n0mc/EiIjIwKBgFgseghYumtczZatYAQRmBdZTdlYp7JhJuTB7ymBzxQTjKJ+DWD6\nPqi1IPOPh0/xb7dZL/yB9j8HwFP0YIx2QMP+VGHZoYzoK/mY0gQTP3DyjiHOzjsT\nfSqc2/rqt0RNum2bEe29KD0Wa3PeuUflVScz5r7OrxafXbqweRd3sJ+hAoGBAJWp\n1E3Sbr94uU3Lt4swLsBPsRAbfTDLF/EMqZBvXtiHnhPRSUf2LybNsuU8qkRAvmFU\n3NsIc4InA9p2kcLj2H/kg5XKXg14NoVowBnxvADXzcaQxTNJfADVOApGd4l8Xdsd\nohxXSCF4n6zSN91/QBSngYSL30mb9WIPRI7PBF+XAoGALCvjI5FgZFS7S2Xlkfys\nQvbJSeJMS7xp0MKRz2aZtpRnWTs30/6PslTLnMiWrwtnqXddB01xbSWRFfTKdePd\nmmtio9kdmq0I8yq8BTvN4BhN6hmv9tgDE8895cOnQDTdFazFwTiETNvJ+nVcMPy3\nkRihj1MtPVBTcGuLIzIzoik=\n-----END PRIVATE KEY-----\n",
+  "client_email": "claudiugordon458@inspired-campus-391618.iam.gserviceaccount.com",
+  "client_id": "100963146980890481782",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/claudiugordon458%40inspired-campus-391618.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
