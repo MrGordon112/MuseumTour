@@ -19,6 +19,7 @@
 display:none;
 }
 .openbtn {
+ position: sticky;
     top: 0;
     left: 0;
     height:100%;
@@ -40,6 +41,7 @@ display:none;
 }
 
 .navbar-logo {
+ position: sticky;
   color: #fff;
   justify-self: start;
   margin-left: 40px;
