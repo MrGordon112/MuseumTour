@@ -31,7 +31,7 @@ let {profile,user}=useContext(AuthContext)
 
 <Link to='/addMuseum' ><button className="add_button" >+ add museum</button></Link>
 
-<div className="body_list">
+<div>
   {museums.map((museum, index) =>(<ItemMuseum   key={index} museum={museum} />))  }
 
 

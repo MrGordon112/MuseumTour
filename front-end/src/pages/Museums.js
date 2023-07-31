@@ -47,7 +47,7 @@ let {profile,user}=useContext(AuthContext)
   return (<div>
 
   <HeaderMuseums/>
-<div className="body_list">
+<div>
 <form class="search" action="">
   <input type="search" placeholder="Search here..."
     defaultValue={searchTerm}
