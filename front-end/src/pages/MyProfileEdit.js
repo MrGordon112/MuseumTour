@@ -41,7 +41,7 @@ useEffect(()=>{
 
  },[imageUpload])
   const handleSubmit=()=> {
-         axios.patch('http://127.0.0.1:8000/museums/profile/'+user?.user_id,inputs )
+         axios.patch('/museums/profile/'+user?.user_id,inputs )
         .then((response)=>{
             if(!response.status==200){
                 throw new Error('not added')

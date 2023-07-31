@@ -18,7 +18,7 @@ let navigate=useNavigate()
         if (result) {
     //Logic to delete the item
 
-        fetch('http://127.0.0.1:8000/museums/profile/'+user?.user_id,{method:"DELETE"})
+        fetch('/museums/profile/'+user?.user_id,{method:"DELETE"})
         .then((response)=>{
          logoutUser();
             navigate('/');

@@ -7,24 +7,24 @@ import { useNavigate } from "react-router-dom"
 const ItemMuseum = ({museum})  => {
 
 
-    let [museumLink,setMuseumLink] = useState("./images/museum.jpg")
+    let [museumLink,setMuseumLink] = useState("https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/images%2Fmuseum.jpg?alt=media&token=35fc3081-77ae-49ff-ab83-0446912c0896")
     let getMuseumPhoto = () => {
     if(museum?.type=="war" ){
-        setMuseumLink("./images/war_museum.jpg")}
+        setMuseumLink("https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/images%2Fwar_museum.jpg?alt=media&token=8a0210cb-5c9a-4e8e-8515-0b35548e28ee")}
     if(museum?.type=="science" || museum?.type=="biologic" || museum?.type=="history")
-        setMuseumLink("./images/science_museum.jpg")
+        setMuseumLink("https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/images%2Fscience_museum.jpg?alt=media&token=57368431-9ff1-4aec-92d2-1420947defe5")
     if(museum?.type=="art")
-        setMuseumLink("./images/art_museum.jpg")
+        setMuseumLink("https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/images%2Fart_museum.jpg?alt=media&token=c53a3f77-bb93-4e47-95b8-8f08b94c4f31")
     if(museum?.type=="guns")
-        setMuseumLink("./images/guns_museum.jpg")
+        setMuseumLink("https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/images%2Fguns_museum.jpg?alt=media&token=8aa8f1d5-cc9f-4463-a25d-eef0ab9ac79a")
     if(museum?.type=="tanks")
-        setMuseumLink("./images/tanks_museum.jpg")
+        setMuseumLink("https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/images%2Ftanks_museum.jpg?alt=media&token=d977e329-5e46-4359-a533-413f7445c16f")
     if(museum?.type=="plane")
-        setMuseumLink("./images/planes_museum.jpg")
+        setMuseumLink("https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/images%2Fplanes_museum.jpg?alt=media&token=a44c6a63-7fc1-469c-a5c7-631977af052f")
     if(museum?.type=="literature")
-        setMuseumLink("./images/literature_museum.jpg")
+        setMuseumLink("https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/images%2Fliterature_museum.jpg?alt=media&token=1bccfb33-a44e-4d36-ab09-fbc2212c7486")
     if(museum?.type=="van gogh")
-        setMuseumLink("./images/van_gogh_museum.jpg")
+        setMuseumLink("https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/images%2Fvan_gogh_museum.jpg?alt=media&token=75a74c71-e759-431d-96db-0f39fab96fc7")
     }
 
     useEffect(() => {

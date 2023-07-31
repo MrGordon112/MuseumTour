@@ -15,7 +15,7 @@ let {profile,user}=useContext(AuthContext)
  useEffect(() => {
 
             setLoading(true);
-           fetch('http://127.0.0.1:8000/museums/list_my_museums/'+profile?.id) // Updated API endpoint with pagination parameters
+           fetch('/museums/list_my_museums/'+profile?.id) // Updated API endpoint with pagination parameters
             .then((response) => response.json())
             .then((data) => {
             setMuseums(data);

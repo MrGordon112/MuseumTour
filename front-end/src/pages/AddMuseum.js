@@ -42,7 +42,7 @@ const handleFileChange = (event) => {
 
    const handleSubmit=()=> {
 
-           axios.post('http://127.0.0.1:8000/museums/list_museums/',inputs) // Updated API endpoint with pagination parameters
+           axios.post('/museums/list_museums/',inputs) // Updated API endpoint with pagination parameters
 
         navigate('/myMuseums');
 

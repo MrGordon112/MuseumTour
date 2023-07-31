@@ -18,7 +18,7 @@ function Footer() {
 
 let postRequest=async()=>
     {
-         axios.post('http://127.0.0.1:8000/museums/requests/',request).then(()=>{setRequest({...request, details: ""})})
+         axios.post('/museums/requests/',request).then(()=>{setRequest({...request, details: ""})})
 
 
     }

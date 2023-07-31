@@ -18,7 +18,7 @@ const SignUpPage=()=>{
 
 
  const signUp=async()=> {
-        let response= axios.post('http://127.0.0.1:8000/museums/register/',formData)
+        let response= axios.post('/museums/register/',formData)
         .then((response)=>{
             if(response.status!=200){
                 throw new Error('not added')
@@ -100,7 +100,7 @@ const SignUpPage=()=>{
             </form>
             </div>
               <div class="signup-image">
-                        <figure><img src="images/signup-image.jpg" alt="sing up image"></img></figure>
+                        <figure><img src="https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/images%2Fsignup-image.jpg?alt=media&token=5b3788c7-1da4-484c-ae78-344f5a166a6a" alt="sing up image"></img></figure>
                        <Link to='/login' class="signup-image-link">Already a member?</Link>
                     </div>
 </div></div>

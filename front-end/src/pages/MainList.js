@@ -15,7 +15,7 @@ const MainList = ()  => {
 
      let navigate = useNavigate();
  let CreateChannel = ()=>{
-     axios.post('http://127.0.0.1:8000/my_app/channels/all',nameChannel)
+     axios.post('/my_app/channels/all',nameChannel)
         .then((response)=>{
             if(!response.status==201){
                 alert("not added")

@@ -16,7 +16,7 @@ const LoginPage=()=>{
                 <div className="signin-content">
 
                 <div className="signin-image">
-                 <figure><img src="images/signin-image.jpg" alt="sing up image"></img></figure>
+                 <figure><img src="https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/images%2Fsignin-image.jpg?alt=media&token=7de31d99-e4f2-4ab9-a328-da7c3b47ba36" alt="sing up image"></img></figure>
                  <Link to='/sign-up' class="signup-image-link">Create an account</Link>
 
 </div>

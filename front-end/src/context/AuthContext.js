@@ -16,7 +16,7 @@ export const AuthProvider = ({children}) => {
     let history=useNavigate()
 
      let getProfile = async()=>{
-             let response =await fetch('http://127.0.0.1:8000/museums/profile/'+user?.user_id)
+             let response =await fetch('/museums/profile/'+user?.user_id)
              let data = await response.json()
               localStorage.setItem('profile',JSON.stringify(data))
               setProfile(data)
@@ -34,7 +34,7 @@ export const AuthProvider = ({children}) => {
 
         console.log('form submited')
         e.preventDefault()
-        let response=await fetch('http://127.0.0.1:8000/museums/token/',{
+        let response=await fetch('/museums/token/',{
         method:'POST',
         headers:{
         'Content-Type':'application/json'
@@ -66,7 +66,7 @@ export const AuthProvider = ({children}) => {
 
     let updateToken  = async () =>{
     console.log('update token call')
-    let response=await fetch('http://127.0.0.1:8000/museums/token/refresh/',{
+    let response=await fetch('/museums/token/refresh/',{
         method:'POST',
         headers:{
         'Content-Type':'application/json'

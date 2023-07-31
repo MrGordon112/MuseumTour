@@ -48,13 +48,13 @@ const PostDetail = ({match})  => {
     },[])
 
     let getComments=async()=>{
-    let response =await fetch('http://127.0.0.1:8000/museums/comments/'+postId)
+    let response =await fetch('/museums/comments/'+postId)
         let data = await response.json()
         setComments(data)
     }
     let postComment=async()=>
     {
-         axios.post('http://127.0.0.1:8000/museums/comments/'+postId,comment).then(()=>{setComment({...comment, details: ""})})
+         axios.post('/museums/comments/'+postId,comment).then(()=>{setComment({...comment, details: ""})})
 
 
     }
@@ -63,7 +63,7 @@ const PostDetail = ({match})  => {
 
     //Logic to delete the item
 
-        fetch('http://127.0.0.1:8000/museums/comment/'+data,{method:"DELETE"})
+        fetch('/museums/comment/'+data,{method:"DELETE"})
         .then((response)=>{
             window.location.reload();
             if(!response.ok){
@@ -74,7 +74,7 @@ const PostDetail = ({match})  => {
         }
 
     let getPost = async()=>{
-         let response =await fetch('http://127.0.0.1:8000/museums/post_detail/'+postId)
+         let response =await fetch('/museums/post_detail/'+postId)
         let data = await response.json()
         setPost(data)
         }
@@ -130,7 +130,7 @@ const canvas = document.getElementById(post?.id);
     const imageRef = ref(storage, post.museum.name+"_"+post.museum.city+'/' + v4());
     // Upload the binary data to Firebase Storage
     uploadBytes(imageRef, blob)})
-    axios.put('http://127.0.0.1:8000/museums/post_detail/'+post.id,updatedPost)
+    axios.put('/museums/post_detail/'+post.id,updatedPost)
     setCheck(1)
     }
 

@@ -52,13 +52,13 @@ const MuseumDetail = ({match})  => {
 
 
     let getMuseum = async()=>{
-        let response =await fetch('http://127.0.0.1:8000/museums/list_museums/'+ museumId)
+        let response =await fetch('/museums/list_museums/'+ museumId)
         let data = await response.json()
         setMuseum(data)
         }
 
     let getPosts = async()=>{
-        let response =await fetch('http://127.0.0.1:8000/museums/museums_posts/'+ museumId)
+        let response =await fetch('/museums/museums_posts/'+ museumId)
         let data = await response.json()
         setPosts(data)
         }
