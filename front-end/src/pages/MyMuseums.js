@@ -27,16 +27,12 @@ let {profile,user}=useContext(AuthContext)
 
 
   return (<div>
-<HeaderAdministrator/>
-
-<Link to='/addMuseum' ><button className="add_button" >+ add museum</button></Link>
-
-<div>
-  {museums.map((museum, index) =>(<ItemMuseum   key={index} museum={museum} />))  }
-
-
-</div>
-<Footer2/>
-				</div>
+    <HeaderAdministrator/>
+    <Link to='/addMuseum' ><button className="add_button" >+ add museum</button></Link>
+        <div class="body_list">
+            {museums.map((museum, index) =>(<ItemMuseum   key={index} museum={museum} />))  }
+        </div>
+    <Footer2/>
+		</div>
 				);
 }

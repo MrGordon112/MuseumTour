@@ -34,24 +34,22 @@ useEffect(() => {
   }, []);
   return (
   <div className='myProfile'>
-  <div className="card-container">
-  <span className="pro">Profile</span>
-  <img className="round img_profile" src={profile?.urlImage} alt="user" />
-    <h3>First Name:{profile?.first_name}</h3>
-<h3>Last Name:{profile?.last_name}</h3>
-<h6>Gender:{profile?.gender}</h6>
-<h6>Birthday:{profile?.birthday}</h6>
-<h6>Email:{profile?.user.email}</h6>
-<h6>UserName:{profile?.user.username}</h6>
- <h1><Link to='/myProfileEdit'  >
-           <button className="primary">Edit</button>
+    <div className="card-container">
+        <span className="pro">Profile</span>
+        <img className="round img_profile" src={profile?.urlImage} alt="user" />
+        <h3>First Name:{profile?.first_name}</h3>
+        <h3>Last Name:{profile?.last_name}</h3>
+        <h6>Gender:{profile?.gender}</h6>
+        <h6>Birthday:{profile?.birthday}</h6>
+        <h6>Email:{profile?.user.email}</h6>
+        <h6>UserName:{profile?.user.username}</h6>
+        <h1><Link to='/myProfileEdit'  >
+        <button className="primary">Edit</button>
            <br/>
            <br/>
-          </Link>
-
-<button className="delete" className="primary" onClick={Delete}>&#x2716;Delete Account </button></h1>
-
-</div>
+        </Link>
+        <button className="delete" className="primary" onClick={Delete}>&#x2716;Delete Account </button></h1>
+    </div>
   </div>
   );
 }

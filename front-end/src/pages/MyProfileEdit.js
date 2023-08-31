@@ -40,13 +40,14 @@ useEffect(()=>{
         })
 
  },[imageUpload])
+
   const handleSubmit=()=> {
          axios.patch('/museums/profile/'+user?.user_id,inputs )
         .then((response)=>{
             if(!response.status==200){
                 throw new Error('not added')
-
-            }  }
+            }
+            }
         ).catch((e)=>{alert(e)});
         navigate('/myProfile')
     };
@@ -59,16 +60,13 @@ useEffect(()=>{
 
 <div className='myProfile'>
   <div className="card-container">
-  <span className="pro">Profile</span>
-
-<form onSubmit={handleSubmit}
-    >
-     <label><h6>Profile Photo</h6></label>
-  <input type="file"  onChange={handleFileChange} />
-
-  {imageUpload && (
-  <img className="round img_profile" src={inputs?.urlImage} alt="user" />
-      )}
+    <span className="pro">Profile</span>
+        <form onSubmit={handleSubmit}>
+        <label><h6>Profile Photo</h6></label>
+    <input type="file"  onChange={handleFileChange} />
+    {imageUpload && (
+        <img className="round img_profile" src={inputs?.urlImage} alt="user" />
+        )}
 
       <label><h6>First</h6>
       <input
@@ -102,7 +100,7 @@ useEffect(()=>{
           name="birthday"
            onChange={(event) => setInputs({...inputs, birthday: event.target.value})}
         />
-        </label><br /> <br />
+        </label><br/> <br/>
        <label> <button className="primary " type="submit">Done</button></label>
     </form>
   </div></div>

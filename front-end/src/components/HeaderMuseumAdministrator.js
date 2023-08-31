@@ -45,7 +45,7 @@ function HeaderMuseumAdministrator({museum})   {
 
   return (
   <div>
-    <div className='hero-container'>
+    <div className='hero-container  '>
 
       <h1>{museum?.name}</h1>
       <br/>

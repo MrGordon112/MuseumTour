@@ -29,19 +29,19 @@ const MainList = ()  => {
 
 
 return (
-		<div id="popup1" >
+	<div id="popup1" >
 		<br/>
 		<h1>Messenger app</h1>
 		<br/>
 		<table>
-		<tbody>
-            <thead>
-                <tr>
-				    <th></th>
-				    <th>Channel</th>
-				    <th>Number of users</th>
-			    </tr>
-			</thead>
+		    <tbody>
+                <thead>
+                    <tr>
+				        <th></th>
+				        <th>Channel</th>
+				        <th>Number of users</th>
+			        </tr>
+			    </thead>
 			<tbody>
 			    <tr>
 			        <td>1</td>

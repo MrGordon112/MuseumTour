@@ -8,7 +8,7 @@ const SignUpPage=()=>{
     let navigate=useNavigate()
     const [errorMessage, setErrorMessage] = useState("");
     let {name, }= useContext(AuthContext)
-     const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({
         username: '',
         email: '',
         password: '',
@@ -26,13 +26,11 @@ const SignUpPage=()=>{
 
         }
         ).catch((e)=>{console.log(e)})
-
         navigate("/login")
     }
 
     return (
         <div class="main">
-
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
@@ -66,7 +64,8 @@ const SignUpPage=()=>{
                         required
                     />
 </div>
- <div class="form-group">
+
+<div class="form-group">
                     <label></label>
                     <input
                         className='form-control'
@@ -79,7 +78,9 @@ const SignUpPage=()=>{
                         minLength='6'
                         required
                     />
-</div> <div class="form-group">
+</div>
+
+ <div class="form-group">
                     <label></label>
                         <input
                             className='form-control'
@@ -102,9 +103,10 @@ const SignUpPage=()=>{
                         <figure><img src="https://firebasestorage.googleapis.com/v0/b/museum-ee649.appspot.com/o/images%2Fsignup-image.jpg?alt=media&token=5b3788c7-1da4-484c-ae78-344f5a166a6a" alt="sing up image"></img></figure>
                        <Link to='/login' class="signup-image-link">Already a member?</Link>
                     </div>
-</div></div>
+</div>
+</div>
 </section>
-        </div>
+</div>
     );
 };
 

@@ -19,9 +19,11 @@ import MyProfileEdit from './pages/MyProfileEdit';
 import Museums from './pages/Museums';
 import MyMuseums from './pages/MyMuseums';
 import AddMuseum from './pages/AddMuseum'
+import EditMuseum from './pages/EditMuseum'
 import MuseumDetail from './pages/MuseumDetail'
 import PostDetail from './pages/PostDetail'
 import AddPost from './pages/AddPost'
+import EditPost from './pages/EditPost'
 
 function App() {
 const [sidebarOpen, setSideBarOpen] = useState(false);
@@ -43,9 +45,11 @@ const [sidebarOpen, setSideBarOpen] = useState(false);
           <Route exact path='/myProfileEdit' element={<MyProfileEdit/>} />
           <Route path='/myMuseums' element={<MyMuseums/>} />
           <Route path='/addMuseum' element={<AddMuseum/>} />
+          <Route path='/editMuseum/:id' element={<EditMuseum/>} />
           <Route path = "/museums/:id" element={<MuseumDetail/>} />
           <Route path = "/posts/:id" element={<PostDetail/>} />
           <Route path='/addPost/:id' element={<AddPost/>} />
+          <Route path='/editPost/:id' element={<EditPost/>} />
           <Route path='/login' element={<LoginPage/>} />
           <Route path='/sign-up' element={<SignUpPage/>} />
                 </Routes>

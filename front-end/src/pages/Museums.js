@@ -44,25 +44,22 @@ let {profile,user}=useContext(AuthContext)
 	    }, [])
 
 
-  return (<div>
+  return (
+  <div>
+    <HeaderMuseums/>
+    <div class="body_list2">
+        <form class="search" action="">
+            <input type="search" placeholder="Search here..."
+                defaultValue={searchTerm}
+                onChange={handleChange}
+                required/>
+        </form>
 
-  <HeaderMuseums/>
-<div>
-<form class="search" action="">
-  <input type="search" placeholder="Search here..."
-    defaultValue={searchTerm}
-    onChange={handleChange}
-   required/>
+        {searchTerm && searchResults.map((museum, index) =>(<ItemMuseum   key={index} museum={museum} />))}
+        {!searchTerm && museums.map((museum, index) =>(<ItemMuseum   key={index} museum={museum} />))  }
 
-
-</form>
-
-   {searchTerm && searchResults.map((museum, index) =>(<ItemMuseum   key={index} museum={museum} />))}
-  {!searchTerm && museums.map((museum, index) =>(<ItemMuseum   key={index} museum={museum} />))  }
-
-</div>
-<Footer2/>
-
-				</div>
-				);
+    </div>
+    <Footer2/>
+  </div>
+  );
 }

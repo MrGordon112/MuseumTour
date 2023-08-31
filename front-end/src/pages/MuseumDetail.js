@@ -70,39 +70,36 @@ const MuseumDetail = ({match})  => {
 
 
     const downloadQrCodes= async () => {
-  const zip = new JSZip();
-  const storage = getStorage();
-  const folderRef = ref(
-    storage,
-    museum.name+"_"+museum.city+'/'
-  );
-  const folderItems = await listAll(folderRef);
+        const zip = new JSZip();
+        const storage = getStorage();
+        const folderRef = ref(
+            storage,
+            museum.name+"_"+museum.city+'/'
+        );
+        const folderItems = await listAll(folderRef);
 
-await Promise.all(
-      folderItems.items.map(async (item) => {
-      const fileRef=ref(storage,museum.name+"_"+museum.city+'/'+item.name)
-        const fileUrl=await getDownloadURL(fileRef);
-        const response = await fetch(fileUrl);
-        const itemBlob = await response.blob();
-        console.log(fileUrl)
+        await Promise.all(
+            folderItems.items.map(async (item) => {
+            const fileRef=ref(storage,museum.name+"_"+museum.city+'/'+item.name)
+            const fileUrl=await getDownloadURL(fileRef);
+            const response = await fetch(fileUrl);
+            const itemBlob = await response.blob();
 
          // Download the file's data as a blob
-        zip.file(item.name+".png", itemBlob ); // Add the file to the zip with its original name
-      })
-    );
+            zip.file(item.name+".png", itemBlob ); // Add the file to the zip with its original name
+        })
+        );
 
     // Generate the zip content and create a Blob
-    const zipBlob = await zip.generateAsync({ type: 'blob' });
+        const zipBlob = await zip.generateAsync({ type: 'blob' });
 
 
     // Create a temporary download link and trigger the download
-    const downloadLink = document.createElement('a');
-    downloadLink.href = URL.createObjectURL(zipBlob);
-    downloadLink.download = 'qrCodes_'+museum.name+'_city_'+museum.city+".zip";
-    downloadLink.click();
-
-
-};
+        const downloadLink = document.createElement('a');
+        downloadLink.href = URL.createObjectURL(zipBlob);
+        downloadLink.download = 'qrCodes_'+museum.name+'_city_'+museum.city+".zip";
+        downloadLink.click();
+    };
 
 
        const Delete = async () => {
@@ -124,37 +121,30 @@ await Promise.all(
 
 
 	return (
-		<div>
+	<div>
 		<HeaderMuseumAdministrator museum={museum} />
+        <div className="body_list">
+            <button className="add_button" onClick={downloadQrCodes}>&#x2193;  Download QrCodes</button>
+            {profile?.id===museum?.profile?.id && (<div>
+            <Link to={'/editMuseum/'+museumId}><button className="edit_button">&#x270E;Edit Museum</button></Link>
+	        <Link to={'/addPost/'+museumId}><button className="add_button">&#x2713;Add Exponate</button></Link>
+	        <button className="delete" className="delete_button" onClick={Delete}>&#x2716;Delete Museum  </button></div>
+	        )}
+            <form class="search" action="">
+
+            <input type="search" placeholder="Search by name..."
+                defaultValue={searchTerm}
+                onChange={handleChange}
+            required/>
+            </form>
 
 
+            {searchTerm && searchResults.map((post, index) =>(<ItemPost   key={index} post={post}/>)) }
+            {!searchTerm && posts.map((post, index) =>(<ItemPost   key={index} post={post}/>))  }
+        </div>
+        <Footer2/>
 
-<div className="body_list">
-  <button className="add_button" onClick={downloadQrCodes}>&#x2193;  Download QrCodes</button>
-{profile?.id===museum?.profile?.id && (<div>
-     <Link to={'/addPost/'+museumId}><button className="edit_button">&#x270E;Edit Museum</button></Link>
-	<Link to={'/addPost/'+museumId}><button className="add_button">&#x2713;Add Exponate</button></Link>
-	<button className="delete" className="delete_button" onClick={Delete}>&#x2716;Delete Museum  </button></div>
-	)}
-
-
-<form class="search" action="">
-
-  <input type="search" placeholder="Search by name..."
-    defaultValue={searchTerm}
-    onChange={handleChange}
-   required/>
-
-
-</form>
-
-
-     {searchTerm && searchResults.map((post, index) =>(<ItemPost   key={index} post={post}/>)) }
-    {!searchTerm && posts.map((post, index) =>(<ItemPost   key={index} post={post}/>))  }
-</div>
-<Footer2/>
-
-		</div>
+    </div>
 		)
 };
 

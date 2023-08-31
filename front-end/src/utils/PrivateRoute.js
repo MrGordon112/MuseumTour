@@ -10,7 +10,7 @@ import  {
 const PrivateRoute = () => {
     let {user}=useContext(AuthContext) // determine if authorized, from context or however you're doing it
     let auth = false
-console.log('it is what it is')
+    console.log('it is what it is')
     // If authorized, return an outlet that will render child elements
     // If not, return element that will navigate to login page
      return user ? <Outlet /> : <Navigate to="/login" />;

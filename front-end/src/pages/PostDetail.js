@@ -20,9 +20,10 @@ import {ref,uploadBytes,listAll,getDownloadURL} from 'firebase/storage'
 
 const PostDetail = ({match})  => {
 
-    let navigate = useNavigate();
     const { id } = useParams();
     let postId = id
+
+    let navigate = useNavigate();
     let {profile,user}=useContext(AuthContext)
     let [post,setPost] = useState()
     let [check,setCheck]=useState(0)
@@ -136,78 +137,78 @@ const canvas = document.getElementById(post?.id);
 
 }
 
-	return (<div className="body-post">
-	<div class="container-post">
- <div class="wrapper-post">
-   <div class="banner-image">
-   <ModalImage className="post-img"
-  small={post?.urlImage}
-  large={post?.urlImage}
-  alt="Hello World!"
-/>
+	return (
+	<div className="body-post">
+	    <div class="container-post">
+            <div class="wrapper-post">
+                <div class="banner-image">
+                   <ModalImage className="post-img"
+                        small={post?.urlImage}
+                        large={post?.urlImage}
+                    />
 
-   </div>
-   <h1 className="h1-post"> {post?.name}</h1>
-   <h4 className="h2-post">{post?.author}</h4>
-   <p className="p-post">Details:<br/>{post?.description} </p>
-  </div>
-  <div class="button-wrapper">
+                </div>
+                <h1 className="h1-post"> {post?.name}</h1>
+                <h4 className="h2-post">{post?.author}</h4>
+                <p className="p-post">Details:<br/>{post?.description} </p>
+            </div>
+            <div class="button-wrapper">
 
-  </div>
+            </div>
 
- {profile?.id===post?.museum?.profile?.id && <div><button className="delete_button2" onClick={Delete}>Delete</button>
-<div>
-<QRCode
-    id={post?.id}
-    value={"blabla"+post?.id}
-    size={200}
-    level={"H"}
-    includeMargin={true}
-  />
+            {profile?.id===post?.museum?.profile?.id && <div><button className="delete_button2" onClick={Delete}>Delete</button>
+            <Link to={'/editPost/'+postId}  ><button className="edit_button2">Edit Post</button></Link>
+            <div>
+                <QRCode
+                    id={post?.id}
+                    value={"http://34.17.7.204/#/posts/"+post?.id}
+                    size={200}
+                    level={"H"}
+                    includeMargin={true}
+                    />
 
-<div><button className="add_button2" onClick={downloadQR}> Download QR</button>{!post.isUploaded&&!check&&<button className="add_button2" onClick={uploadQr}> Upload QR</button>}</div></div></div>}
-<h2 class="comments-title" id="comments">
-      <span>Comments</span>
-    </h2>
-<div className="all-comment-section">
-<div className="comment-section">
+                <div><button className="add_button2" onClick={downloadQR}> Download QR</button>{!post.isUploaded&&!check&&<button className="add_button2" onClick={uploadQr}> Upload QR</button>}</div></div></div>}
+                <h2 class="comments-title" id="comments">
+                <span>Comments</span>
+                </h2>
+                <div className="all-comment-section">
+                    <div className="comment-section">
+                        {comments.map((Comment, index) =>(<div>
+                        <figure class="snip1197 hover">
+                            <figcaption>
+                                <blockquote>{Comment?.details}</blockquote>
+                                <div class="arrow"></div>
+                            </figcaption>
+                            <img src={Comment?.profile?.urlImage} />
+                            <div class="author">
+                                <h5>{Comment?.profile?.first_name} {Comment?.profile?.last_name} {profile?.id==Comment.profile.id&&<button className="delete-comment" onClick={() =>DeleteComment(Comment?.id)}>
+                                delete </button> }  </h5>
+                            </div>
+                        </figure>
 
-       {comments.map((Comment, index) =>(<div>
-       <figure class="snip1197 hover">
-  <figcaption>
-    <blockquote>{Comment?.details}</blockquote>
-    <div class="arrow"></div>
-  </figcaption>
-  <img src={Comment?.profile?.urlImage} alt="sq-sample33"/>
-  <div class="author">
-    <h5>{Comment?.profile?.first_name} {Comment?.profile?.last_name} {profile?.id==Comment.profile.id&&<button className="delete-comment" onClick={() =>DeleteComment(Comment?.id)}>
-delete </button> }  </h5>
-
-  </div>
-</figure>
-
-<p></p></div>))  }</div>
-
+                        <p></p></div>))  }
+                    </div>
 
 
- {profile && <form onSubmit={postComment} id="comment-form">
 
-        <textarea
-        className="textarea-comment"
-          maxlength="100"
-          name="details"
-           value={comment.details}
-            onChange={(event) => setComment({...comment, details: event.target.value})}
-          placeholder="Write a comment..."
-          required
-        />
-        <button type="submit" className="send-comment">Leave Comment</button>
-      </form>}
-{!profile && <h2  className="h2-Post" >
-      <span>If you want to leave a comment please<Link to={'/login'}> Login</Link></span>
-    </h2>}
-    </div>
-</div>
+                    {profile && <form onSubmit={postComment} id="comment-form">
+
+                        <textarea
+                            className="textarea-comment"
+                            maxlength="100"
+                            name="details"
+                            value={comment.details}
+                            onChange={(event) => setComment({...comment, details: event.target.value})}
+                            placeholder="Write a comment..."
+                            required
+                        />
+                        <button type="submit" className="send-comment">Leave Comment</button>
+                        </form>}
+                    {!profile && <h2  className="h2-Post" >
+                    <span>If you want to leave a comment please<Link to={'/login'}> Login</Link></span>
+                    </h2>}
+                </div>
+            </div>
 
 		</div>
 		)
